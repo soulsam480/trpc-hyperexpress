@@ -3,10 +3,7 @@ import { TRPCError } from '@trpc/server';
 import EventEmitter from 'events';
 import HyperExpress from 'hyper-express';
 import { z } from 'zod';
-import {
-  CreateHyperExpressContextOptions,
-  createTRPC,
-} from '../src/hyperExpressHandler';
+import { CreateHyperExpressContextOptions, createTRPC } from '../src';
 
 const createContext = ({ req, res }: CreateHyperExpressContextOptions) => {
   const getUser = () => {
