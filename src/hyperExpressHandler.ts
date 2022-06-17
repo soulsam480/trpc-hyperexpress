@@ -19,19 +19,13 @@ export type HyperExpressOptions<
     prefix?: string;
   };
 
-type HyperExpressHandlerOptions<
-  TRouter extends AnyRouter,
-  TRequest extends HyperExpress.Request,
-  TResponse extends HyperExpress.Response,
-> = HyperExpressOptions<TRouter, TRequest, TResponse>;
-
 export type CreateHyperExpressContextOptions = NodeHTTPCreateContextFnOptions<
   HyperExpress.Request,
   HyperExpress.Response
 >;
 
 export function createHyperExpressHandler<TRouter extends AnyRouter>(
-  opts: HyperExpressHandlerOptions<
+  opts: HyperExpressOptions<
     TRouter,
     HyperExpress.Request,
     HyperExpress.Response
@@ -92,18 +86,4 @@ export function createHyperExpressHandler<TRouter extends AnyRouter>(
 
     response.send(result.body);
   };
-}
-
-export function createTRPC<TRouter extends AnyRouter>(
-  app: HyperExpress.Server,
-  {
-    prefix,
-    ...rest
-  }: HyperExpressHandlerOptions<
-    TRouter,
-    HyperExpress.Request,
-    HyperExpress.Response
-  >,
-) {
-  app.all(`${prefix ?? '/trpc'}/:path`, createHyperExpressHandler(rest));
 }

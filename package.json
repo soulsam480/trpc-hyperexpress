@@ -2,25 +2,34 @@
   "name": "trpc-hyperexpress",
   "version": "0.0.0",
   "description": "HyperExpress adapter for tRPC",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "scripts": {
     "dev:server": "nodemon -e ts -w . -x ts-node ./example/server",
     "dev:client": "nodemon -e ts -w . -x 'wait-on tcp:3005 && ts-node ./example/client'",
     "dev": "run-p dev:* --print-label",
-    "build": "tsc",
     "start": "pnpm dev",
-    "test-dev": "start-server-and-test 'ts-node example/server' 3005 'ts-node example/client'"
-  },
-  "author": "soulsam480<soulsam480@hotmail.com>",
-  "license": "MIT",
-  "dependencies": {
-    "@trpc/client": "^9.25.2",
-    "@trpc/server": "^9.25.2",
-    "abort-controller": "^3.0.0",
-    "hyper-express": "^6.2.3",
-    "node-fetch": "^2.6.1",
-    "zod": "^3.17.3"
+    "test-dev": "start-server-and-test 'ts-node example/server' 3005 'ts-node example/client'",
+    "build": "tsup"
   },
   "devDependencies": {
+    "@trpc/server": "^9.25.2",
+    "hyper-express": "^6.2.3",
+    "zod": "^3.17.3",
+    "@trpc/client": "^9.25.2",
+    "abort-controller": "^3.0.0",
+    "node-fetch": "^2.6.1",
     "@types/node": "^18.0.0",
     "@types/node-fetch": "^2.6.2",
     "nodemon": "^2.0.12",
@@ -30,5 +39,29 @@
     "tsup": "^6.1.2",
     "typescript": "^4.7.3",
     "wait-on": "^6.0.0"
-  }
+  },
+  "author": "soulsam480<soulsam480@hotmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/soulsam480/trpc-hyperexpress.git"
+  },
+  "homepage": "https://github.com/soulsam480/trpc-hyperexpress#readme",
+  "keywords": [
+    "uws",
+    "websockets",
+    "uwebsocketsjs",
+    "express",
+    "expressjs",
+    "fast",
+    "http-server",
+    "https-server",
+    "http",
+    "https",
+    "ws",
+    "websocket",
+    "performance",
+    "router",
+    "trpc"
+  ]
 }

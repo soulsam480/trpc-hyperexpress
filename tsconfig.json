@@ -9,8 +9,6 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "sourceMap": true,
     "resolveJsonModule": true,
     /* Strict Type-Checking Options */
@@ -19,8 +17,6 @@
     "strictNullChecks": true /* Enable strict null checks. */,
     "noImplicitThis": true /* Raise error on 'this' expressions with an implied 'any' type. */,
     "alwaysStrict": true /* Parse in strict mode and emit "use strict" for each source file. */,
-    // "strictPropertyInitialization": false,
-    /* Additional Checks */
     "noUnusedLocals": true /* Report errors on unused locals. */,
     "noUnusedParameters": true /* Report errors on unused parameters. */,
     "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
