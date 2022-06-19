@@ -20,8 +20,9 @@
     "noUnusedLocals": true /* Report errors on unused locals. */,
     "noUnusedParameters": true /* Report errors on unused parameters. */,
     "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
-    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */
+    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
+    "types": ["vitest/globals"]
   },
   "exclude": ["node_modules"],
-  "include": ["./src/**/*.ts", "./example/**/*.ts"]
+  "include": ["./src/**/*.ts", "./example/**/*.ts", "./tests/**/*.ts"]
 }
