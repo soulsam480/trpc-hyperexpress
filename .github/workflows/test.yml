@@ -36,11 +36,8 @@ jobs:
 
       - run: pnpm install
 
-      - name: Test
-        run: pnpm run test:run
-
-      - name: Get coverage
-        run: pnpm run coverage
+      - name: Test and generate coverage
+        run: pnpm run test:coverage
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3

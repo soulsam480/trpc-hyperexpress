@@ -24,7 +24,7 @@
     "build": "tsup",
     "test": "vitest --coverage",
     "test:run": "vitest run",
-    "coverage": "vitest run --coverage"
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@trpc/client": "^9.25.2",
