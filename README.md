@@ -1,6 +1,10 @@
 ## tRPC-HyperExpress
 > tRPC adapter for HyperExpress
 
+
+[![Codecov][codecov-src]][codecov-href] [![Test](https://github.com/soulsam480/trpc-hyperexpress/actions/workflows/test.yml/badge.svg)](https://github.com/soulsam480/trpc-hyperexpress/actions/workflows/test.yml)
+
+
 ### Why ?
 - [HyperExpress](https://github.com/kartikk221/hyper-express) is fast, like really fast and has much higher throughoutput than fastify. See the benchmarks
 - I freaking love tRPC and the typesafety it brings.
