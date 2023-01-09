@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@trpc/client": "^9.25.2",
-    "@trpc/server": "^9.25.2",
+    "@trpc/server": "^10.8.1",
     "@types/node": "^18.0.0",
     "@types/node-fetch": "^2.6.2",
     "abort-controller": "^3.0.0",
